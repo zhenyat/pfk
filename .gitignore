@@ -1,0 +1,3 @@
+# Ignore Mac OS X sys files
+*.DS_Store
+*/.DS_Store
