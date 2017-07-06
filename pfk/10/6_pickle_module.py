@@ -16,10 +16,12 @@ game_data = {
   'money'           : 158.50
 }
 
-fout = open('game.dat', 'wb')
+fout = open('game_data.dat', 'wb')
 pickle.dump(game_data, fout)
+print('Data saved')
 fout.close()
 
-fin         = open('game.dat', 'rb')
+fin         = open('game_data.dat', 'rb')
 loaded_data = pickle.load(fin)
+print('Loaded data:')
 print(loaded_data)
