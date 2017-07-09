@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 ################################################################################
-#   07_ball_direction.py
+#   08_paddle_class.py
 #
-#   Python for Kids, Ch. 13: a ball direction (x limits)
+#   Python for Kids, Ch. 14 a paddle class
 #
-#   07.07.2017  Created by:  zhenya
+#   08.07.2017  Created by:  zhenya
 ################################################################################
 
 from   tkinter import *
@@ -23,7 +23,7 @@ class Ball:
     self.x =  starts[0]
     self.y = -3
     self.canvas_height = self.canvas.winfo_height()
-    self.canvas_width  = self.canvas.winfo_width()    # 07
+    self.canvas_width  = self.canvas.winfo_width()
     
   def draw(self):                   # 05: change code below
     self.canvas.move(self.id, self.x, self.y)
@@ -35,12 +35,20 @@ class Ball:
       self.y = 3
     if pos[3] >= self.canvas_height:  # Bottom reached
       self.y = -3
-    # 07
     if pos[0] <= 0:                   # Left reached
       self.x = 3
     if pos[2] >= self.canvas_width:   # Rightreached
       self.x = -3
-    
+# 08
+class Paddle:
+  def __init__(self, canvas, color):
+    self.canvas = canvas
+    self.id     = canvas.create_rectangle(0, 0, 100, 10, fill=color)
+    self.canvas.move(self.id, 200, 300)
+
+  def draw(self):
+    pass
+
 tk = Tk()
 tk.title("Game")
 tk.resizable(0, 0)                # Set fixed size Window
@@ -51,11 +59,13 @@ canvas.pack()
 
 tk.update()   # Initializes itsekf for teh game animation
 
-ball = Ball(canvas, 'red')
+ball   = Ball(canvas, 'red')
+paddle = Paddle(canvas, 'blue') # 08
 
 # Main loop:  redraws screen
 while(True):
-  ball.draw()     
+  ball.draw()
+  paddle.draw()           # 08
   tk.update_idletasks()
   tk.update()
   time.sleep(0.01)
