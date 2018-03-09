@@ -7,8 +7,9 @@
 #   05.06.2017  Created by:  zhenya
 #   05.07.2017  try except
 #   06.07.2017  comments to __future__
+#   09.03.2018  seems __future__ not needed
 ################################################################################
-from __future__ import print_function  # must be 1st line (NB bug for separators 'end'?)
+#from __future__ import print_function  # must be 1st line (NB bug for separators 'end'?)
 import sys
 
 ROWS = 5
