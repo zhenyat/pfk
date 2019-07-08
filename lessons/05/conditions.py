@@ -4,6 +4,7 @@
 #   Python for Kids, Ch. 5: IF statements
 #
 #   05.07.2017  Created by: zhenya
+#   08.07.2019  Last update
 ################################################################################
 
 answer = input("enter 2 digits: ").split()
@@ -45,7 +46,15 @@ if x == None:
 
 # String vs Integer
 answer = input("enter 10: ")
+print(type(answer))
 if answer == 10:      
-  print('It is 10')
+  print('It is integer 10')
 else:
-  print('It is not 10')
+  print('It is not string "10"')
+
+answer = input("enter 10: ")
+print(type(answer))
+if int(answer) == 10:      
+  print('It is integer 10')
+else:
+  print('It is not string "10"')

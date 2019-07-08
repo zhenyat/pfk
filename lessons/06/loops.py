@@ -4,15 +4,16 @@
 #   Python for Kids, Ch. 6: Loops
 #
 #   05.07.2017  Created by: zhenya
+#   08.07.2019  Last update
 ################################################################################
 
 ### FOR Loop
-for x in range(0, 5):
-  print('%s: hello' % x)
+for i in range(0, 5):
+  print('%s: hello' % i)
   
 print('\n')
-for x in range(5):
-  print('again %s: hello' % x)
+for i in range(5):
+  print('again %s: hello' % i)
 
 print('\n')
 print(list(range(10, 20)))
@@ -34,3 +35,9 @@ while step < 10:
   print(step)
   step = step + 1
 
+print('\nWHILE True Loop:')
+step = 0
+while True:
+    print(step)
+    step += 1
+    if (step == 5): break

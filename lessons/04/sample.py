@@ -8,10 +8,10 @@
 ################################################################################
 import turtle
 
-wm = turtle.Screen()  
+main_window = turtle.Screen()  
 t  = turtle.Pen()     # or t  = turtle.Turtle()
 
 t.lt(90)
 t.fd(100)
 
-wm.mainloop()
+main_window.mainloop()

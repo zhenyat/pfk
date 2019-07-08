@@ -9,7 +9,7 @@
 #   06.07.2017  comments to __future__
 #   09.03.2018  seems __future__ not needed
 ################################################################################
-#from __future__ import print_function  # must be 1st line (NB bug for separators 'end'?)
+from __future__ import print_function  # must be 1st line (NB bug for separators 'end'?)
 import sys
 
 ROWS = 5
@@ -57,4 +57,4 @@ while(True):
           places[row-1][col-1] = 0
           show_free(places) 
     except Exception:
-      sys.exit("Something wrong! Job completed")
+      sys.exit("Something happened wrong! Job completed")
