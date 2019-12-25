@@ -6,6 +6,7 @@
 #   05.07.2017  Created by: zhenya
 #   08.07.2019  Last update
 ################################################################################
+from __future__ import print_function
 
 ### FOR Loop
 for i in range(0, 5):
@@ -41,3 +42,10 @@ while True:
     print(step)
     step += 1
     if (step == 5): break
+    
+# Nested Loops
+print('\nNested Loops:')
+for i in range(10):
+    print('\ni = %d: ' % i, end='')
+    for j in range(10):
+        print('%3d' % j, end='')

@@ -58,3 +58,6 @@ if int(answer) == 10:
   print('It is integer 10')
 else:
   print('It is not string "10"')
+
+if True: print('true')
+else:    print('false')
